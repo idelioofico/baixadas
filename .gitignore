@@ -1,0 +1,28 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage
+/vendor
+/toUp
+.env
+.dest
+stock_armazem_central.zip
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+dest.zip
+baixadas_tt_reports_2.0.zip
+vendor.zip
+vendor.zip
+.sql
+.env copy.example
+.sql
+.env copy.example
+.sql
