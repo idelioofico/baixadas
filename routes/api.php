@@ -21,6 +21,7 @@ Route::prefix('iam')->name('iam.')->group(function () {
     Route::post('/login', [IAMController::class, 'login'])->name('login');
 });
 
+
 Route::middleware('auth:sanctum')->group(function () {
 
     Route::prefix('param')->name('param.')->group(function () {

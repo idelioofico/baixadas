@@ -121,7 +121,7 @@ class BaixadaAPIController extends Controller
 
                 $contador = DB::table('baixada')->where([['contador', $request->contador], ['removido', 0]])->count();
 
-                if ($contador == 0) {
+                if ($contador<1) {
 
                     $user_att = UserAtribution::where([['user_id', Auth::user()->id], ['removido', 0], ['status', 1]])->first();
 
@@ -157,9 +157,18 @@ class BaixadaAPIController extends Controller
 
                     $response = [
                         'success' => true,
-                        'message' => 'Produto salvo com sucesso.',
+                        'message' => 'Baixada salvo com sucesso.',
                         'data' => [],
                         'status' => $status = 201
+                    ];
+
+                }else{
+
+                    $response = [
+                        'success' => false,
+                        'message' => 'Baixada foi anteriormente registada.',
+                        'data' => [],
+                        'status' => $status = 413
                     ];
                 }
             }
